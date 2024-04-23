@@ -18,18 +18,21 @@ const {
   getSongBySongId,
   addSongByAlbumId,
   editSongBySongId,
-  deleteSongBySongId
-} = require('./data');
+  deleteSongBySongId,
+} = require("./data");
 
-const express = require('express');
+const express = require("express");
 const app = express();
 
-// Your code here 
+// Your code here
+app.get("/artists/:artistId", (req, res) => {
+  ///here is where i stopped
+});
 
 // DO NOT MODIFY
 if (require.main === module) {
   const port = 8000;
-  app.listen(port, () => console.log('Server is listening on port', port));
+  app.listen(port, () => console.log("Server is listening on port", port));
 } else {
   module.exports = app;
 }
